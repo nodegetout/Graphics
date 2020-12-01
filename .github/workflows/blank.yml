@@ -39,7 +39,7 @@ name: github actions start
 on:push
 
 jobs:
-  my-jobs:
+  my-job:
     name: My Job
     runs-on: Ubuntu-lastest
     steps:
