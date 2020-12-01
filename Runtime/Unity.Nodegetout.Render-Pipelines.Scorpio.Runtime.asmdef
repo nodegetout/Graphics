@@ -1,0 +1,15 @@
+{
+    "name": "Unity.Nodegetout.Render-Pipelines.Scorpio.Runtime",
+    "references": [
+        "Unity.Nodegetout.Render-Pipelines.Scorpio.Shaders"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
