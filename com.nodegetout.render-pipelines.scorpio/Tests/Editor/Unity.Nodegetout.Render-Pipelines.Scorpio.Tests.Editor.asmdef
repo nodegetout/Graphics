@@ -1,6 +1,12 @@
 {
     "name": "Unity.Nodegetout.Render-Pipelines.Scorpio.Tests.Editor",
-    "references": [],
+    "references": [
+        "Unity.Nodegetout.Render-Pipelines.Scorpio.Tests.Runtime",
+        "Unity.Nodegetout.Render-Pipelines.Scorpio.Editor",
+        "Unity.Nodegetout.Render-Pipelines.Scorpio.Runtime",
+        "UnityEditor.TestRunner",
+        "UnityEngine.TestRunner"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
