@@ -1,0 +1,23 @@
+{
+  "name": "com.nodegetout.render-pipelines.scorpio",
+  "description": ".",
+  "version": "0.0.1",
+  "unity": "2019.4",
+  "unityRelease": "6f1",
+  "displayName": "Scorpio RP",
+  "dependencies": {
+    "com.unity.render-pipelines.unversal": "7.5.1"
+  },
+  "keywords": [
+    "graphics",
+    "performance",
+    "rendering",
+    "mobile",
+    "render",
+    "pipeline"
+  ],
+  "repository": {
+    "url": "https://github.com/nodegetout/Graphics.git",
+    "type": "git"
+  }
+}
