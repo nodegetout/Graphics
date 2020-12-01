@@ -34,3 +34,20 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+name: github actions start
+on:push
+
+jobs:
+  my-jobs:
+    name: My Job
+    runs-on: Ubuntu-lastest
+    steps:
+    -name: Print a greeting
+     env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
+      run: |
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
