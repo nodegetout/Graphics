@@ -1,7 +1,7 @@
 ::设置模块名字
 SET ToolName=upm-scorpio
 ::设置模块版本
-SET ToolVersion=scorpio-0.0.2
+SET ToolVersion=scorpio-0.0.3
 ::设置模块源路径
 SET ToolAssetPath=com.nodegetout.render-pipelines.scorpio
 
