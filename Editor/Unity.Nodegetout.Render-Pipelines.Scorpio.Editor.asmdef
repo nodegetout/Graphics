@@ -1,5 +1,5 @@
 {
-    "name": "Unity.Nodegetout.Render-Pipeline.Scorpio.Tests.Editor",
+    "name": "Unity.Nodegetout.Render-Pipelines.Scorpio.Editor",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

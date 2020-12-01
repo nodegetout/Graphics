@@ -1,13 +1,10 @@
 {
   "name": "com.nodegetout.render-pipelines.scorpio",
-  "description": ".",
+  "description": "This is a render pipeline package test.",
   "version": "0.0.1",
   "unity": "2019.4",
   "unityRelease": "6f1",
   "displayName": "Scorpio RP",
-  "dependencies": {
-    "com.unity.render-pipelines.unversal": "7.5.1"
-  },
   "keywords": [
     "graphics",
     "performance",
@@ -16,8 +13,8 @@
     "render",
     "pipeline"
   ],
-  "repository": {
-    "url": "https://github.com/nodegetout/Graphics.git",
-    "type": "git"
+  "author": {
+      "name": "nodegetout",
+      "url": "https://github.com/nodegetout/Graphics.git"
   }
 }
