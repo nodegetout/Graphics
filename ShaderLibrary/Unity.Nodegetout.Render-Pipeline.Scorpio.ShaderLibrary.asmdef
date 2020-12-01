@@ -1,5 +1,5 @@
 {
-    "name": "Nodegetout.Pipeline.Scorpio.Tests.Runtime",
+    "name": "Unity.Nodegetout.Render-Pipeline.Scorpio.ShaderLibrary",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
