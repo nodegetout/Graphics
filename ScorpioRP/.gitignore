@@ -4,4 +4,6 @@
 **/*.csproj
 
 # Unity Editor
-Logs/
+**/Logs
+**/Temp
+**/obj
