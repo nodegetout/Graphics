@@ -4,11 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 20
-<<<<<<< HEAD
-  productGUID: ecb39706c960049cab7c72928ff0e91a
-=======
-  productGUID: 69db0164252cec746b1fadef32f95cfb
->>>>>>> 1acf5b8d7fdbbd0060f81aad74e9f468ea34062b
+  productGUID: cbbcd0a0f23e74888b17b8310ed22bd0
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -45,15 +41,12 @@ PlayerSettings:
     height: 1
   m_SplashScreenLogos: []
   m_VirtualRealitySplashScreen: {fileID: 0}
-<<<<<<< HEAD
   m_ShowUnitySplashAds: 0
   m_AdsAndroidGameId: 
   m_AdsIosGameId: 
   m_ShowSplashAdsSlogan: 0
   m_SloganImage: {fileID: 0}
   m_SloganHeight: 150
-=======
->>>>>>> 1acf5b8d7fdbbd0060f81aad74e9f468ea34062b
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -131,10 +124,7 @@ PlayerSettings:
   vulkanNumSwapchainBuffers: 3
   vulkanEnableSetSRGBWrite: 0
   vulkanEnableLateAcquireNextImage: 0
-<<<<<<< HEAD
   useSecurityBuild: 0
-=======
->>>>>>> 1acf5b8d7fdbbd0060f81aad74e9f468ea34062b
   m_SupportedAspectRatios:
     4:3: 1
     5:4: 1
@@ -283,10 +273,7 @@ PlayerSettings:
   m_BuildTargetIcons: []
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching: []
-<<<<<<< HEAD
   m_BuildTargetEncrypting: []
-=======
->>>>>>> 1acf5b8d7fdbbd0060f81aad74e9f468ea34062b
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
   m_BuildTargetGraphicsAPIs: []
@@ -480,11 +467,7 @@ PlayerSettings:
   ps4GarlicHeapSize: 2048
   ps4ProGarlicHeapSize: 2560
   playerPrefsMaxSize: 32768
-<<<<<<< HEAD
-  ps4Passcode: wQj99nsQzldVI5ZuGXbEWRK5RhRXdCdG
-=======
-  ps4Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
->>>>>>> 1acf5b8d7fdbbd0060f81aad74e9f468ea34062b
+  ps4Passcode: N2qmWqBlQ9wQj99nsQzldVI5ZuGXbEWR
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
