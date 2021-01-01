@@ -58,9 +58,8 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-<<<<<<< HEAD
 
-
+# add for unity project
 # IDEs
 **/.vscode/
 **/.history/
@@ -74,6 +73,3 @@ crashlytics-build.properties
 **/Temp
 **/obj
 **/Library
-=======
-ScorpioRP/ProjectSettings/ProjectVersion.txt
->>>>>>> 1acf5b8d7fdbbd0060f81aad74e9f468ea34062b
