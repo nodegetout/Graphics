@@ -17,7 +17,11 @@ MonoBehaviour:
   m_Registries:
   - m_Id: main
     m_Name: 
+<<<<<<< HEAD
     m_Url: https://packages.unity.cn
+=======
+    m_Url: https://packages.unity.com
+>>>>>>> 1acf5b8d7fdbbd0060f81aad74e9f468ea34062b
     m_Scopes: []
     m_IsDefault: 1
   m_UserSelectedRegistryName: 
