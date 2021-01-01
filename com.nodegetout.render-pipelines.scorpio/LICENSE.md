@@ -1,1 +1,0 @@
-com.nodegetout.render-pipelines.scorpio copyright © 2020 Edan
