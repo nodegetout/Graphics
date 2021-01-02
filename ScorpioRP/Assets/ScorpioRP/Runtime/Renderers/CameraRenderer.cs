@@ -23,7 +23,9 @@ namespace ScorpioRP.Runtime
         {
             this.m_Context = context;
             this.m_Camera = camera;
-
+            
+            PrepareBuffer();
+            PrepareForSceneWindow();
             if (!Cull())
             {
                 return;
@@ -32,6 +34,7 @@ namespace ScorpioRP.Runtime
             Setup();
             DrawVisibleGeometry();
             DrawUnsupportedShaders();
+            DrawGizmos();
             Submit();
         }
 

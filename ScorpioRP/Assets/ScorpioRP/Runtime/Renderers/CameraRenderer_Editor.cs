@@ -5,7 +5,10 @@ namespace ScorpioRP.Runtime
 {
     public partial class CameraRenderer
     {
+        partial void DrawGizmos();
         partial void DrawUnsupportedShaders();
+        partial void PrepareForSceneWindow();
+        partial void PrepareBuffer();
 #if UNITY_EDITOR
         static ShaderTagId[] legacyShaderTagIds =
         {
@@ -39,6 +42,24 @@ namespace ScorpioRP.Runtime
 
             var filteringSettings = FilteringSettings.defaultValue;
             m_Context.DrawRenderers(m_CullingResults, ref drawingSettings, ref filteringSettings);
+        }
+
+        partial void DrawGizmos()
+        {
+            
+        }
+
+        partial void PrepareForSceneWindow()
+        {
+            if (m_Camera.cameraType is CameraType.SceneView)
+            {
+                ScriptableRenderContext.EmitWorldGeometryForSceneView(m_Camera);
+            }
+        }
+
+        partial void PrepareBuffer()
+        {
+            m_Buffer.name = m_Camera.name;
         }
 #endif
     }
