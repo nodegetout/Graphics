@@ -3,23 +3,13 @@ using UnityEngine.Rendering;
 
 namespace ScorpioRP.Runtime
 {
-    public class CameraRenderer
+    public partial class CameraRenderer
     {
         private const string bufferName = "Render Camera";
 
         // Why just SRPDefaultUnlit take effect;
         private static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");
-
-        static ShaderTagId[] legacyShaderTagIds =
-        {
-            new ShaderTagId("Always"),
-            new ShaderTagId("ForwardBase"),
-            new ShaderTagId("PrepassBase"),
-            new ShaderTagId("Vertex"),
-            new ShaderTagId("VertexLMRGBM"),
-            new ShaderTagId("VertexLM")
-        };
-
+        
         private CommandBuffer m_Buffer = new CommandBuffer()
         {
             name = bufferName
@@ -88,16 +78,6 @@ namespace ScorpioRP.Runtime
             drawingSetting.sortingSettings = sortingSettings;
             filteringSettings.renderQueueRange = RenderQueueRange.transparent;
             m_Context.DrawRenderers(m_CullingResults, ref drawingSetting, ref filteringSettings);
-        }
-
-        void DrawUnsupportedShaders()
-        {
-            var drawingSettings = new DrawingSettings(legacyShaderTagIds[0], new SortingSettings(m_Camera));
-            // var filteringSettings = new FilteringSettings();
-            for (int i = 0; i < legacyShaderTagIds.Length; i++)
-            {
-                drawingSettings.SetShaderPassName(i, legacyShaderTagIds[i]);
-            }
         }
 
         void Submit()
