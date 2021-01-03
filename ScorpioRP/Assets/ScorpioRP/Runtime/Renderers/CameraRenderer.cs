@@ -19,7 +19,7 @@ namespace ScorpioRP.Runtime
         private Camera m_Camera;
         private CullingResults m_CullingResults;
 
-        public void Render(ScriptableRenderContext context, Camera camera)
+        public void Render(ScriptableRenderContext context, Camera camera, bool useDynamicBatching, bool useGPUInstancing)
         {
             this.m_Context = context;
             this.m_Camera = camera;
@@ -32,7 +32,7 @@ namespace ScorpioRP.Runtime
             }
 
             Setup();
-            DrawVisibleGeometry();
+            DrawVisibleGeometry(useDynamicBatching, useGPUInstancing);
             DrawUnsupportedShaders();
             DrawGizmos();
             Submit();
@@ -67,7 +67,7 @@ namespace ScorpioRP.Runtime
             m_Buffer.Clear();
         }
 
-        void DrawVisibleGeometry()
+        void DrawVisibleGeometry(bool useDynamicBatching, bool useGPUInstancing)
         {
             var sortingSettings = new SortingSettings(m_Camera)
             {
@@ -75,7 +75,12 @@ namespace ScorpioRP.Runtime
             };
             var drawingSetting = new DrawingSettings(
                 unlitShaderTagId, sortingSettings
-            );
+            )
+            {
+                enableDynamicBatching = useDynamicBatching,
+                enableInstancing = useGPUInstancing
+            };
+
             var filteringSettings = new FilteringSettings(RenderQueueRange.opaque);
             m_Context.DrawRenderers(m_CullingResults, ref drawingSetting, ref filteringSettings);
 
