@@ -9,6 +9,7 @@ namespace ScorpioRP.Runtime
         partial void DrawUnsupportedShaders();
         partial void PrepareForSceneWindow();
         partial void PrepareBuffer();
+
 #if UNITY_EDITOR
         static ShaderTagId[] legacyShaderTagIds =
         {
@@ -20,19 +21,20 @@ namespace ScorpioRP.Runtime
             new ShaderTagId("VertexLM")
         };
 
-        static Material m_ErrorMaterial;
+        static Material s_ErrorMaterial;
+        private string SampleName { get; set; }
 
         partial void DrawUnsupportedShaders()
         {
             // If without error material override, standard material display fine.Why?
-            if (m_ErrorMaterial == null)
+            if (s_ErrorMaterial == null)
             {
-                m_ErrorMaterial = new Material(Shader.Find("Hidden/InternalErrorShader"));
+                s_ErrorMaterial = new Material(Shader.Find("Hidden/InternalErrorShader"));
             }
 
             var drawingSettings = new DrawingSettings(legacyShaderTagIds[0], new SortingSettings(m_Camera))
             {
-                overrideMaterial = m_ErrorMaterial
+                overrideMaterial = s_ErrorMaterial
             };
 
             for (int i = 0; i < legacyShaderTagIds.Length; i++)
@@ -46,7 +48,6 @@ namespace ScorpioRP.Runtime
 
         partial void DrawGizmos()
         {
-            
         }
 
         partial void PrepareForSceneWindow()
@@ -59,8 +60,10 @@ namespace ScorpioRP.Runtime
 
         partial void PrepareBuffer()
         {
-            m_Buffer.name = m_Camera.name;
+            m_Buffer.name = SampleName = m_Camera.name;
         }
+#else
+    const string SampleName = buffer.name;
 #endif
     }
 }
