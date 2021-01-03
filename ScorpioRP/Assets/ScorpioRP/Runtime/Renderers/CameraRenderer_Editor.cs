@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Profiling;
 using UnityEngine.Rendering;
 
 namespace ScorpioRP.Runtime
@@ -11,6 +12,7 @@ namespace ScorpioRP.Runtime
         partial void PrepareBuffer();
 
 #if UNITY_EDITOR
+        static readonly string s_ProfilerTagEditor = "Editor Only";
         static ShaderTagId[] legacyShaderTagIds =
         {
             new ShaderTagId("Always"),
@@ -60,7 +62,9 @@ namespace ScorpioRP.Runtime
 
         partial void PrepareBuffer()
         {
+            Profiler.BeginSample(s_ProfilerTagEditor);
             m_Buffer.name = SampleName = m_Camera.name;
+            Profiler.EndSample();
         }
 #else
     const string SampleName = buffer.name;

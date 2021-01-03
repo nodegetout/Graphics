@@ -9,7 +9,7 @@ namespace ScorpioRP.Runtime
 
         // Why just SRPDefaultUnlit take effect;
         private static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");
-        
+
         private CommandBuffer m_Buffer = new CommandBuffer()
         {
             name = bufferName
@@ -23,7 +23,7 @@ namespace ScorpioRP.Runtime
         {
             this.m_Context = context;
             this.m_Camera = camera;
-            
+
             PrepareBuffer();
             PrepareForSceneWindow();
             if (!Cull())
@@ -52,7 +52,11 @@ namespace ScorpioRP.Runtime
         void Setup()
         {
             m_Context.SetupCameraProperties(m_Camera);
-            m_Buffer.ClearRenderTarget(true, true, Color.clear);
+            CameraClearFlags clearFlags = m_Camera.clearFlags;
+            m_Buffer.ClearRenderTarget(
+                clearFlags <= CameraClearFlags.Depth,
+                clearFlags == CameraClearFlags.Color,
+                clearFlags == CameraClearFlags.Color ? m_Camera.backgroundColor.linear : Color.clear);
             m_Buffer.BeginSample(bufferName);
             ExecuteBuffer();
         }
