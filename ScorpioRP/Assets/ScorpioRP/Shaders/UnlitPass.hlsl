@@ -9,6 +9,8 @@ Varings UnlitPassVertex(Attributes input)
     
     float3 positionWS = TransformObjectToWorld(input.positionOS);
     output.positionCS = TransformWorldToHClip(positionWS);
+    float4 baseST     = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseMap_ST);
+    output.baseUV     = input.baseUV * baseST.xy + baseST.zw;
     return output;
 }
 
@@ -16,7 +18,8 @@ float4 UnlitPassFragment(Varings input) : SV_TARGET
 {
     UNITY_SETUP_INSTANCE_ID(input)
     float4 baseColor = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseColor);
-    return baseColor;
+    float4 baseMap   = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, input.baseUV);
+    return baseMap * baseColor;
 }
 
 #endif

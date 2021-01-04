@@ -1,7 +1,6 @@
-using System;
+using ScorpioRP.Runtime.Components;
 using UnityEditor;
 using UnityEngine;
-using Random = System.Random;
 
 namespace Example.Editor
 {
@@ -81,6 +80,8 @@ namespace Example.Editor
                 randomSphereVector.z *= m_RandomRadiusVector.z;
                 Debug.Log(randomSphereVector);
                 go.transform.localPosition = randomSphereVector;
+                var perObjectMaterialPropComponent = go.AddComponent<PerObjectMaterialProperties>();
+                perObjectMaterialPropComponent.baseColor = new Color(randomSphereVector.x, randomSphereVector.y, randomSphereVector.z, Random.value);
             }
         }
     }

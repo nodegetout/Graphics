@@ -8,8 +8,8 @@ namespace ScorpioRP.Runtime.Components
         private static int s_BaseColorID = Shader.PropertyToID("_BaseColor");
         private static MaterialPropertyBlock s_MaterialPropertiesBlock;
         
-        [SerializeField]
-        Color baseColor = Color.white;
+        // [SerializeField]
+        public Color baseColor = Color.white;
 
         void Awake()
         {
