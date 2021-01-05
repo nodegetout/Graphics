@@ -9,6 +9,7 @@ namespace ScorpioRP.Runtime
 
         // Why just SRPDefaultUnlit take effect;
         private static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");
+        private static ShaderTagId litShaderTagId = new ShaderTagId("ScorpioLit");
 
         private CommandBuffer m_Buffer = new CommandBuffer()
         {
@@ -73,23 +74,22 @@ namespace ScorpioRP.Runtime
             {
                 criteria = SortingCriteria.CommonOpaque
             };
-            var drawingSetting = new DrawingSettings(
-                unlitShaderTagId, sortingSettings
-            )
+            var drawingSettings = new DrawingSettings(unlitShaderTagId, sortingSettings)
             {
                 enableDynamicBatching = useDynamicBatching,
                 enableInstancing = useGPUInstancing
             };
+            drawingSettings.SetShaderPassName(1, litShaderTagId);
 
             var filteringSettings = new FilteringSettings(RenderQueueRange.opaque);
-            m_Context.DrawRenderers(m_CullingResults, ref drawingSetting, ref filteringSettings);
+            m_Context.DrawRenderers(m_CullingResults, ref drawingSettings, ref filteringSettings);
 
             m_Context.DrawSkybox(m_Camera);
 
             sortingSettings.criteria = SortingCriteria.CommonTransparent;
-            drawingSetting.sortingSettings = sortingSettings;
+            drawingSettings.sortingSettings = sortingSettings;
             filteringSettings.renderQueueRange = RenderQueueRange.transparent;
-            m_Context.DrawRenderers(m_CullingResults, ref drawingSetting, ref filteringSettings);
+            m_Context.DrawRenderers(m_CullingResults, ref drawingSettings, ref filteringSettings);
         }
 
         void Submit()

@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -0.7487405, g: -0.34605223, b: -0, a: 0.89158285}
+  cutoff: 0.5
 --- !u!23 &24970342
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -275,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -1.5129473, g: 1.1029187, b: 0, a: 0.7694732}
+  cutoff: 0.5
 --- !u!23 &59972579
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -382,6 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -0.4850394, g: -0.03068113, b: -0, a: 0.108357444}
+  cutoff: 0.5
 --- !u!23 &134775622
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -581,6 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 4.346228, g: -0.5027205, b: 0, a: 0.38605934}
+  cutoff: 0.5
 --- !u!23 &314955300
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -688,6 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 1.5615323, g: 2.4755015, b: -0, a: 0.50889176}
+  cutoff: 0.5
 --- !u!23 &552303290
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -795,6 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -0.7100641, g: -0.5617684, b: -0, a: 0.8873519}
+  cutoff: 0.5
 --- !u!23 &750840994
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -902,6 +908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 2.725605, g: 3.471348, b: 0, a: 0.072483905}
+  cutoff: 0.5
 --- !u!23 &983977592
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1054,6 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -2.1620471, g: 1.845395, b: 0, a: 0.5542417}
+  cutoff: 0.5
 --- !u!23 &1149315603
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1161,6 +1169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 3.1397128, g: 1.7720459, b: -0, a: 0.8025799}
+  cutoff: 0.5
 --- !u!23 &1207819286
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1268,6 +1277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 2.5817904, g: -0.1783874, b: 0, a: 0.105999246}
+  cutoff: 0.5
 --- !u!23 &1212544973
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1430,6 +1440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -1.966523, g: 0.901756, b: 0, a: 0.22279993}
+  cutoff: 0.5
 --- !u!23 &1359460916
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1490,6 +1501,99 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359460913}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1397231472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397231476}
+  - component: {fileID: 1397231475}
+  - component: {fileID: 1397231474}
+  - component: {fileID: 1397231473}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &1397231473
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397231472}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1397231474
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397231472}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7a5f32dbbf47fff42be477d6d7630b85, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1397231475
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397231472}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1397231476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397231472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.866174, y: -0.9533637, z: -0.48568472}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1435903583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,6 +1641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -0.5199853, g: -0.7894832, b: 0, a: 0.94260347}
+  cutoff: 0.5
 --- !u!23 &1435903586
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1644,6 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -0.84061706, g: 3.4603832, b: 0, a: 0.90858877}
+  cutoff: 0.5
 --- !u!23 &1530007410
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1751,6 +1857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 4.2248626, g: -0.14912331, b: 0, a: 0.048705705}
+  cutoff: 0.5
 --- !u!23 &1600529002
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1858,6 +1965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 3.086032, g: -2.9690206, b: -0, a: 0.38912648}
+  cutoff: 0.5
 --- !u!23 &1611729058
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1965,6 +2073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -0.6388683, g: -1.391266, b: 0, a: 0.23438993}
+  cutoff: 0.5
 --- !u!23 &1632868086
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2072,6 +2181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 2.9869642, g: -1.7257391, b: -0, a: 0.48851818}
+  cutoff: 0.5
 --- !u!23 &1700223399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2179,6 +2289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 0.9268199, g: 2.411546, b: 0, a: 0.74788743}
+  cutoff: 0.5
 --- !u!23 &1704985224
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2286,6 +2397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 0.926414, g: 3.9112666, b: -0, a: 0.5059598}
+  cutoff: 0.5
 --- !u!23 &1778367740
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2393,6 +2505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -0.032279287, g: -3.82015, b: -0, a: 0.8771955}
+  cutoff: 0.5
 --- !u!23 &1858177234
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2500,6 +2613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -2.5770113, g: 2.3880463, b: 0, a: 0.70706004}
+  cutoff: 0.5
 --- !u!23 &1858505895
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2607,6 +2721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -3.0393624, g: 2.964926, b: -0, a: 0.9138291}
+  cutoff: 0.5
 --- !u!23 &1930519003
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2714,6 +2829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -2.673602, g: -2.198129, b: -0, a: 0.7358369}
+  cutoff: 0.5
 --- !u!23 &1938338899
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2821,6 +2937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: -1.4544803, g: 2.7850344, b: -0, a: 0.6761096}
+  cutoff: 0.5
 --- !u!23 &1984334817
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2928,6 +3045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseColor: {r: 2.6902878, g: 1.5780132, b: 0, a: 0.6368225}
+  cutoff: 0.5
 --- !u!23 &2106136524
 MeshRenderer:
   m_ObjectHideFlags: 0

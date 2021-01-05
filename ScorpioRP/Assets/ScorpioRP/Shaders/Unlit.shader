@@ -1,4 +1,4 @@
-Shader "ScorpioRP/Unlit"
+Shader "Scorpio RP/Unlit"
 {
     Properties
     {
@@ -19,7 +19,7 @@ Shader "ScorpioRP/Unlit"
             HLSLPROGRAM
             #pragma shader_feature _CLIPPING
             #pragma multi_compile_instancing
-            #pragma vertex UnlitPassVertex
+            #pragma vertex   UnlitPassVertex
             #pragma fragment UnlitPassFragment
 
             #include "UnlitInput.hlsl"
